@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Bootstrap Script-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Montserrat:ital,wght@0,100;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,600&family=Sansita:ital,wght@1,700&family=Tenor+Sans&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div id="navigation-menu"> 
+        <h3>Shopify</h3>
+        <a href="#add-to-cart"><img class="add-to-cart" src="images/add-to-basket.png" alt="add-to-cart-icon" onclick="openCart()"></a> 
+        
+        <!-- Cart -->
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <div class="cart-content">
+            
+            </div>
+
+            <!-- Total -->
+            <div class="total">
+                <div class="total-title">
+                    Total 
+                </div>
+                <div id="total-price">
+                    ₹0
+                </div>
+            </div>
+
+            <!-- Buy Button -->
+            <button type="button" class="btn btn-buy" onclick="buyNow()">Buy Now</button>
+            <i class="bx bx-x" id="close-cart" onclick="closedCart()"></i>
+        </div>
+    </div>
+
+    <section id="products"> 
+        <h2 class="section_title">Shop Products</h2>
+        <div class="row">
+        
+            <div class="container col-lg-3 col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <img class="product-img" src="images/black-hoodie.png" alt="product-black-hoodie-image" width="150">                
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Nike Pullover Hoodie</h6>
+                        <p class="card-text">₹ 1030</p>
+                        <a href="#" onclick="addCart(event)"><img class="add-to-cart" src="images/add-to-basket.png" alt="add-to-basket"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container col-lg-3 col-md-4">
+                <div class="card">   
+                    <div class="card-header">
+                        <img class="product-img" src="images/water-bottle.png" alt="product-water-bottle-image">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="media-h6 media-bg card-title">Nike Water Bottle</h6>
+                        <p class="card-text">₹ 500</p>
+                        <a href="#" onclick="addCart(event)"><img class="add-to-cart" src="images/add-to-basket.png" alt="add-to-basket"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container col-lg-3 col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <img class="product-img" src="images/bag.png" alt="product-bag-image">                
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Nike Training BackPack</h6>
+                        <p class="card-text">₹ 3400</p>
+                        <a href="#" onclick="addCart(event)"><img class="add-to-cart" src="images/add-to-basket.png" alt="add-to-basket"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container col-lg-3 col-md-4">
+                <div class="card">  
+                    <div class="card-header">
+                        <img class="product-img" src="images/hoodie.png" alt="product-hoodie-image">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Nike Men's Pull Over Hoodie</h6>
+                        <p class="card-text">₹ 3000</p>
+                        <a href="#" onclick="addCart(event)"><img class="add-to-cart" src="images/add-to-basket.png" alt="add-to-basket"></a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="container col-lg-3 col-md-4">
+                <div class="card">  
+                    <div class="card-header" style="padding: 58px 16px;">
+                        <img class="product-img" src="images/glass.png" alt="product-glass-image" style="width: 150px; height: 100px;">
+                    </div>
+                    <div class="card-body ">
+                        <h6 class="media-h6 card-title">Nike Sunglass</h6>  
+                        <p class="card-text">₹ 1500</p>    
+                        <a href="#" onclick="addCart(event)"><img class="add-to-cart" src="images/add-to-basket.png" alt="add-to-basket"></a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="container col-lg-3 col-md-4">
+                <div class="card">   
+                    <div class="card-header" style="padding: 48px 16px;">
+                        <img class="product-img" src="images/cap.png" alt="product-cap-image" style="width: 150px; height: 120px;">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="media-h6 card-title">Nike Hat</h6>
+                        <p class="card-text">₹ 840</p>
+                        <a href="#" onclick="addCart(event)"><img class="add-to-cart" src="images/add-to-basket.png" alt="add-to-basket"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container col-lg-3 col-md-4">
+                <div class="card">
+                    <div class="card-header media-img">
+                        <img class="product-img" src="images/bat.png" alt="product-bat-image">                
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Nike Cricket Bat</h6>
+                        <p class="card-text">₹ 1530</p>
+                        <a href="#" onclick="addCart(event)"><img class="add-to-cart" src="images/add-to-basket.png" alt="add-to-basket"></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container col-lg-3 col-md-4">
+                <div class="card">
+                    <div class="card-header" style="padding: 56px 16px;">
+                        <img class="product-img" src="images/shoe.png" alt="product-shoe-image" style="width: 150px; height: 100px;">                
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Nike men's shoe</h6>
+                        <p class="card-text">₹ 7670</p>
+                        <a href="#" onclick="addCart(event)"><img class="add-to-cart" src="images/add-to-basket.png" alt="add-to-basket"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
